@@ -1,13 +1,11 @@
-package org.structure.bubblesort;
+package org.structure.selectionsort;
 
+public class SelectionSortApp {
 
-public class BubbleSortApp {
     public static void main(String[] args) {
-
         int maxSize = 100;
-        BubbleSort arr;
-
-        arr = new BubbleSort(maxSize);
+        SelectionSort arr;
+        arr = new SelectionSort(maxSize);
 
         arr.insert(34);
         arr.insert(55);
@@ -20,10 +18,8 @@ public class BubbleSortApp {
         arr.insert(53);
         arr.insert(68);
 
-        //arr.display();
-        //arr.bubbleSort();
-        arr.bubbleSort();
-        arr.display();
 
+        arr.selectSort();
+        arr.display();
     }
 }

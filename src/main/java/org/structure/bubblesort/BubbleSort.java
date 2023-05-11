@@ -19,6 +19,11 @@ public class BubbleSort {
         int inner;
 
         for(outer=nElems-1; outer > 1; outer--) {
+            // if no outer it would only run 1 pass of bubbling
+            // in theory could use a different mechanism to realize its all sorted
+            // it will do needless passes once sorted to exhaust outer loop
+            // every outer need only if the sort is completely backwards (every el out of order)
+            System.out.println("Running a sort");
             for(inner=0; inner<outer; inner++){
                 if (a[inner] > a[inner + 1]){
                         swap(inner, inner + 1);
@@ -27,7 +32,10 @@ public class BubbleSort {
         }
     }
 
+
+
     private void swap(int one, int two) {
+        System.out.println("swapping " + a[one] + " and " + a[two]);
         long temp = a[one];
         a[one] = a[two];
         a[two] = temp;
@@ -60,7 +68,7 @@ public class BubbleSort {
 
     public void display() {
         for (int j = 0; j < nElems; j++) {
-            System.out.println(a[j]);
+            System.out.print(a[j] + " ");
         }
     }
 }
